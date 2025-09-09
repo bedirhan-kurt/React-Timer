@@ -84,6 +84,7 @@ export default [
       'jsx-a11y/aria-role': ['error', { ignoreNonDOM: false }],
       'jsx-a11y/img-redundant-alt': ['error'], // Prevent "image", "photo", "picture" in alt text
       'react/default-props-match-prop-types': 'warn',
+      'react/destructuring-assignment': ['error', 'always'],
 
       // ✅ JSX Parentheses
       'react/jsx-wrap-multilines': ['error'],

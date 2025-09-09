@@ -1,24 +1,14 @@
-import {useState, useEffect} from 'react';
+import { useDarkMode } from "../hooks/useDarkMode.jsx";
 
-export default function DarkModeToggle(props) {
-  const [isDarkMode, setIsDarkMode] = useState(false);
-
-  useEffect(() => {
-    props.toggleDarkMode();
-
-    if (isDarkMode) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
-  }, [isDarkMode]);
+export default function DarkModeToggle() {
+  const { isDarkMode, toggleDarkMode } = useDarkMode()
 
   return (
     <label className="inline-flex items-center cursor-pointer">
       <input
         type="checkbox"
         checked={isDarkMode}
-        onChange={() => setIsDarkMode(!isDarkMode)}
+        onChange={() => toggleDarkMode()}
         className="sr-only peer"
       />
       <div
