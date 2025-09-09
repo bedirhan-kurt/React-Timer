@@ -1,10 +1,10 @@
-import {useRef, useState} from "react";
+import { useState } from "react";
 
 import Timer from "./components/Timer";
 import DarkModeToggle from "./components/DarkModeToggle";
 
 function App() {
-  let [darkMode, setDarkMode] = useState(() => {
+  const [darkMode, setDarkMode] = useState(() => {
     const darkModePref = localStorage.getItem("darkMode");
     return darkModePref ? JSON.parse(darkModePref) : "";
   })

@@ -1,5 +1,3 @@
-import {useRef} from "react";
-
 export default function Digits({ timer, setTimer }) {
   function updateTimer(e, type) {
     setTimer((prev) => ({

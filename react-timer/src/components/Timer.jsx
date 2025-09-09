@@ -1,4 +1,4 @@
-import {useRef, useState} from "react";
+import { useState } from "react";
 
 import useTimer from "../hooks/useTimer";
 
@@ -10,7 +10,7 @@ import Toolbar from "./Toolbar.jsx";
 import TimeBlock from "./TimeBlock.jsx";
 
 export default function Timer() {
-  const {timer, setTimer, updateTimerStatus} = useTimer();
+  const { timer, setTimer, updateTimerStatus } = useTimer();
   const [mainTimerValue, setMainTimerValue] = useState([timer.time.hours, timer.time.minutes, timer.time.seconds])
   let progress;
 
@@ -20,7 +20,7 @@ export default function Timer() {
   })
 
   function calculateProgress() {
-    const {hours, minutes, seconds} = timer["time"]
+    const { hours, minutes, seconds } = timer["time"]
     const timerValueSeconds = hours * 3600 + minutes * 60 + seconds
 
     const [mainHours, mainMinutes, mainSeconds] = mainTimerValue;
